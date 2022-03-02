@@ -21,11 +21,18 @@ fun veryFastFib' 0 = 0
         b 
     end ;
 
+fun veryFastFib n =
+    let
+        val (a,b,c,d) = fastMatrixPower(n,0,1,1,1)
+    in
+        b 
+    end ;
+
 use "2-13.sml" ;
 
-veryFastFib' 6 ;
-veryFastFib' 20 ;
-veryFastFib' 50 ;
+veryFastFib 6 ;
+veryFastFib 20 ;
+veryFastFib 50 ;
 
 matrixPower(3000000,1,0,0,1) ;
 fastMatrixPower(3000000,1,0,0,1) ;
